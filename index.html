@@ -6,24 +6,111 @@
     <link rel="stylesheet" href="style.css">
     <title>Home</title>
 </head>
-<body>
-    <h1>Petconomy </h1>
-    <nav>
-        <a href="#">Início</a> 
-        <a href="produtos.html">Produtos</a> 
-        <a href="serviços.html">Serviços</a> 
-        <a href="sobre.html">Sobre</a> 
-        <a href="contato.html">Contato</a>
-    </nav>
-</header>
+<body> 
+    <header>
+        <nav>
+            <a href="#">Início</a> 
+            <a href="produtos.html">Produtos</a> 
+            <a href="serviços.html">Serviços</a> 
+            <a href="sobre.html">Sobre</a> 
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+  <br> 
+       <h1> Petconomy </h1>
+         <br> 
+       <!-- carrosel w3 scholl -->
+        <div class="carrosel">
+          <div class="slides">
+            <div class="numbertext"></div>
+            <img src="./imagens/1.png" style="width:100%" >
+          </div>
 
-<h2>Bem-vindo ao Petland!</h2>
-<p>Cuidando do seu pet com carinho, amor e tudo que ele merece.</p>
+          <div class="slides">
+            <div class="numbertext"></div>
+            <img src="./imagens/2.png" style="width:100%">
+          </div>
 
-<img src="https://cdn.pixabay.com/photo/2017/08/07/18/57/dog-2606759_1280.jpg" alt="Banner Pet Shop">
+          <div class="slides">
+            <div class="numbertext"></div>
+            <img src="./imagens/3.png" style="width:100%" >
+          </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <br>
 
-<a href="#">Conheça nossos serviços</a> |
-<a href="#">Ver produtos</a>
+        <!-- conteudo da home -->
+        <div class="conteudo">
+            <div class="foto-item">
+                <div class="foto-circulo">
+                    <img src="./imagens/tosa.jpg" alt="Banho e Tosa">
+                </div>
+                <h3>Banho e Tosa</h3>
+                <p>Cuidados especiais para deixar seu pet sempre limpo e cheiroso</p>
+        </div>
     
+        <div class="foto-item">
+            <div class="foto-circulo">
+                <img src="./imagens/veterinario.jpg" alt="Atendimento Veterinário">
+            </div>
+            <h3>Atendimento Veterinário</h3>
+            <p>Profissionais qualificados para cuidar da saúde do seu pet</p>
+        </div>
+        
+        <div class="foto-item">
+              <div class="foto-circulo">
+                  <img src="./imagens/racao.jpg" alt="Produtos de Qualidade">
+              </div>
+              <h3>Produtos Premium</h3>
+              <p>As melhores marcas e produtos para seu companheiro</p>
+          </div>
+      </div>
+<br>
+<p class="conteudo-home"> 
+Aqui o carinho pelos pets vem em primeiro lugar. <br>
+Na Petconomy, você encontra tudo que seu melhor amigo precisa — com qualidade, preço justo e muito amor envolvido. <br>
+De acessórios a serviços, estamos aqui pra cuidar do seu pet como ele merece.
+</p>
+<br>
+<footer>
+  📍 Rua dos Bichinhos Felizes, 123 – São Paulo, SP <br>  📞 (11) 99999-1234 <br>  ✉️ contato@petconomy.com.br
+</footer>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+    
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 </body>
 </html>
