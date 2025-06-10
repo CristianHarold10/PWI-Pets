@@ -4,26 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Produtos</title>
+    <title>Contato - Petconomy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h1>Petconomy </h1>
-    <nav>
-        <a href="#">Início</a> 
-        <a href="#">Produtos</a> 
-        <a href="#">Serviços</a> 
-        <a href="#">Sobre</a> 
-        <a href="#">Contato</a>
-    </nav>
-</header>
+    <header>
+        <nav>
+            <a href="index.html">Início</a> 
+            <a href="produtos.html">Produtos</a> 
+            <a href="serviços.html">Serviços</a> 
+            <a href="sobre.html">Sobre</a> 
+            <a href="#">Contato</a>
+        </nav>
+    </header>
 
-<h2>Bem-vindo ao Petland!</h2>
-<p>Cuidando do seu pet com carinho, amor e tudo que ele merece.</p>
+    <div class="contato-container">
+        <h1>Contato</h1>
+        <br> 
+        <p class="intro-texto">Aqui no Petconomy, adoramos bater um papo com você e seu pet! Seja para tirar dúvidas, 
+            agendar serviços ou simplesmente falar sobre o mundo animal, estamos sempre à disposição.</p>
+        <div class="info-contato">
+            <div class="endereco">
+                <h2><i class="fas fa-map-marker-alt"></i> Como nos Encontrar</h2>
+                <p>Rua dos Pets Felizes, 123<br>
+                Bairro Animado – São Paulo/SP<br>
+                CEP: 12345-678</p>
+                
+                <!-- Mapa do Google -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975870477387!2d-46.6522!3d-23.5505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMyJzQyLjAiUyA0NsKwMzknMDguNCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890!5m2!1spt-BR!2sbr" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
 
-<img src="https://cdn.pixabay.com/photo/2017/08/07/18/57/dog-2606759_1280.jpg" alt="Banner Pet Shop">
+            <div class="contatos">
+                <h2><i class="fas fa-phone"></i> Telefone e WhatsApp</h2>
+                <p>
+                    Fixo: (00) 1234-5678<br>
+                    WhatsApp: (00) 9 8765-4321
+                </p>
+                <a href="https://wa.me/5511990094133" class="whatsapp-button" target="_blank">
+                     Fale Conosco Agora!
+                </a>
 
-<a href="#">Conheça nossos serviços</a> |
-<a href="#">Ver produtos</a>
-    
+                <h3>Atendimento por WhatsApp:</h3>
+                <ul>
+                    <li>Segunda a sexta: 8h às 18h</li>
+                    <li>Sábado: 9h às 13h</li>
+                </ul>
+            </div>
+
+            <div class="redes-sociais">
+                <h2><i class="fas fa-envelope"></i> E-mail e Redes Sociais</h2>
+                <p>
+                    <i class="fas fa-envelope"></i> E-mail: contato@petconomy.com.br<br>
+                    <i class="fab fa-instagram"></i> Instagram: <a href="https://instagram.com/petconomy_oficial" target="_blank">@petconomy_oficial</a><br>
+                    <i class="fab fa-facebook"></i> Facebook: <a href="https://facebook.com/PetconomyOficial" target="_blank">Petconomy Oficial</a>
+                </p>
+            </div>
+
+            <div class="horario">
+                <h2><i class="far fa-clock"></i> Horário de Funcionamento</h2>
+                <table>
+                    <tr>
+                        <td>Segunda a Sexta</td>
+                        <td>8h às 18h</td>
+                    </tr>
+                    <tr>
+                        <td>Sábado</td>
+                        <td>9h às 13h</td>
+                    </tr>
+                    <tr>
+                        <td>Domingo</td>
+                        <td>Fechado</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="formulario-contato">
+            <h2><i class="fas fa-paper-plane"></i> Formulário de Contato</h2>
+            <form id="form-contato" onsubmit="return confirmarEnvio(event)">
+                <div class="form-grupo">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="assunto">Assunto:</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="">Selecione um assunto</option>
+                        <option value="agendamento">Agendamento</option>
+                        <option value="duvida">Dúvida</option>
+                        <option value="orcamento">Orçamento</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+     </div>
+<br> 
+<footer>
+  📍 Rua dos Bichinhos Felizes, 123 – São Paulo, SP <br>  📞 (11) 99999-1234 <br>  ✉️ contato@petconomy.com.br
+</footer>
+<script>
+        function confirmarEnvio(event) {
+            event.preventDefault();
+            alert("Recebemos seu contato! Retornaremos em até 24h.");
+            document.getElementById("form-contato").reset();
+            return false;
+        }
+    </script>
 </body>
 </html>
