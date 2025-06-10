@@ -4,26 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Serviços</title>
+    <title>Produtos</title>
 </head>
 <body>
-    <h1>Petconomy </h1>
-    <nav>
-        <a href="#">Início</a> 
-        <a href="#">Produtos</a> 
-        <a href="#">Serviços</a> 
-        <a href="#">Sobre</a> 
-        <a href="#">Contato</a>
-    </nav>
-</header>
+    <header>
+        <nav>
+            <a href="index.html">Início</a> 
+            <a href="produtos.html">Produtos</a> 
+            <a href="#">Serviços</a> 
+            <a href="sobre.html">Sobre</a> 
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+    <br> 
+     <h1>Nossos Serviços</h1>
+    <br>
+    <div id="banner-servicos"> 
+     <img src="./imagens/servicos.png">
+    </div>
+    <br> 
+    <p class="texto-servicos">
+        Serviços Petconomy, cuidar do seu pet é nossa paixão! <br> 
+        Oferecemos: Banho e Tosa – Seu pet limpinho e estiloso.<br>  🐾 Veterinário – Saúde com carinho e atenção.  <br>  🎾 Day Care e Hotelzinho – Diversão e cuidado o dia todo.
+        <br> 🍖 Loja Pet – Rações, brinquedos, roupinhas e mais. <br> 🎂 Festas Pet – Comemorações cheias de fofura! <br>  Aqui, seu pet é tratado como família. 🐾
+    </p>
+    <div class="container-formulario">
+         <div class="image-section">
+            <img src="./imagens/formulario.jpg" alt="Pet sendo cuidado">
+        </div>
+        <div class="form-section">
+            <h2>Agende um Serviço</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nome">Nome do Responsável:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
 
-<h2>Bem-vindo ao Petland!</h2>
-<p>Cuidando do seu pet com carinho, amor e tudo que ele merece.</p>
+                <div class="form-group">
+                    <label for="nomePet">Nome do Pet:</label>
+                    <input type="text" id="nomePet" name="nomePet" required>
+                </div>
 
-<img src="https://cdn.pixabay.com/photo/2017/08/07/18/57/dog-2606759_1280.jpg" alt="Banner Pet Shop">
+                <div class="form-group">
+                    <label for="servico">Serviço Desejado:</label>
+                    <select id="servico" name="servico" required>
+                        <option value="">Selecione um serviço</option>
+                        <option value="banho">Banho</option>
+                        <option value="tosa">Tosa</option>
+                        <option value="banhoetosa">Banho e Tosa</option>
+                        <option value="veterinario">Consulta Veterinária</option>
+                    </select>
+                </div>
 
-<a href="#">Conheça nossos serviços</a> |
-<a href="#">Ver produtos</a>
-    
+                <div class="form-group">
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Observações:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+                </div>
+
+                <button type="submit">Agendar Serviço</button>
+            </form>
+        </div>
+        
+    </div>
+    <br> 
+<footer>
+  📍 Rua dos Bichinhos Felizes, 123 – São Paulo, SP <br>  📞 (11) 99999-1234 <br>  ✉️ contato@petconomy.com.br
+</footer>
 </body>
 </html>
